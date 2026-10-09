@@ -1,0 +1,75 @@
+2026-10-09  Claude (Anthropic) <noreply@anthropic.com>
+
+	* Port the GTK+ front end (libAiksaurusGTK, gaiksaurus) from GTK+-2.0
+	  to GTK+-3.0 (requires >= 3.22): GtkCombo -> GtkComboBoxText,
+	  GtkCList -> GtkTreeView, GtkTooltips -> tooltip text, RC styles ->
+	  CSS, GtkVBox/GtkHBox -> GtkBox, stock icons -> icon names,
+	  GtkStyle/GdkBitmap/GTK_WIDGET_* and direct struct access removed
+	* Remove dynamic exception specifications and the 'register' keyword
+	  so the sources build with current C++ compilers
+	* configure.ac, gaiksaurus-1.0.pc.in: require gtk+-3.0
+	* gaiksaurus: add -t/--tray option (system tray icon via GtkStatusIcon), -m/--minimized; add gaiksaurus(1) man page
+	* AiksaurusGTK: keep the dialog (results, history) when it is closed and
+	  shown again; show the initial message only for a newly created window
+
+2004-06-11  Dom Lachowicz <cinamod@hotmail.com>
+
+	* Make GTK+ FE use stock icons
+	* Bump version number
+	
+2003-05-28  Francis James Franklin  <fjf@alinameridon.com>
+
+	* new build system; Cocoa port (fjf)
+	* spec files (mg, rms)
+	* GTK+-2.0 fixes (dom)
+
+2002-03-28  John Levon  <moz@compsoc.man.ac.uk>
+
+	* src/caiksaurus.cpp: exit() is defined in <stdlib.h>,
+	  so include it
+
+2002-01-13  John Levon  <moz@compsoc.man.ac.uk>
+
+	* src/AiksaurusC.cpp: add std:: qualifier to nothrow
+ 
+2001-12-08  Francis James Franklin  <fjf@alinameridon.com>
+
+	* Extend autoconf/automake build system to AikSaurusGTK
+	* Let libtoolize & automake provide required files
+
+2001-08-27  John Levon  <moz@compsoc.man.ac.uk>
+
+	* CommandLineDemo.cpp:
+	* InteractiveDemo.cpp: change start dir to correct
+	  directory
+ 
+2001-08-27  John Levon  <moz@compsoc.man.ac.uk>
+
+	* Makefile.am:
+	* configure.in: 
+	* data/: moved data into a sub-dir
+ 
+2001-08-16  John Levon  <moz@compsoc.man.ac.uk>
+
+	* Makefile.am:
+	* configure.in:
+	* .cvsignore:
+	* aiksaurus.spec.in: add an RPM spec file
+ 
+2001-08-10  John Levon  <moz@compsoc.man.ac.uk>
+
+	* Makefile.am:
+	* configure.in: bump version
+
+	* .cvsignore: add
+
+	* aclocal.m4:
+	* configure:
+	* config.h.in:
+	* Makefile.in: remove generated file from CVS
+
+2001-08-10  John Levon  <moz@compsoc.man.ac.uk>
+
+	* configure.in:
+	* Makefile.am: fix make distcheck problem, remove
+	extra EXTRA_DIST files

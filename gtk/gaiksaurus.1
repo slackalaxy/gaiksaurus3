@@ -1,0 +1,87 @@
+.TH GAIKSAURUS 1 "October 2026" "" "User Commands"
+.SH NAME
+gaiksaurus \- graphical English thesaurus (GTK+ front end for Aiksaurus)
+.SH SYNOPSIS
+.B gaiksaurus
+[\fB\-t\fR [\fB\-m\fR]]
+[\fIword\fR]
+.br
+.B gaiksaurus
+.RB { \-h | \-\-help | \-v | \-\-version }
+.SH DESCRIPTION
+.B gaiksaurus
+is a graphical interface to the Aiksaurus English thesaurus library.
+Type a word into the
+.B Look up
+box and press Enter (or click the search button) to see its synonyms,
+grouped by meaning.
+Click a word in the results to select it, and double-click it to look it up.
+The back and forward buttons, and the menus next to them, move through the
+list of words looked up earlier.
+.PP
+If a
+.I word
+is given on the command line, it is looked up immediately.
+.SH OPTIONS
+.TP
+.BR \-t ", " \-\-tray
+Also show an icon in the system tray (notification area).
+The thesaurus window opens as usual.
+Clicking the tray icon shows the window, or hides it if it is already
+visible.
+Closing the window only hides it; the program keeps running in the tray.
+The right-click menu of the icon has
+.B Show/Hide
+and
+.B Quit
+entries.
+.TP
+.BR \-m ", " \-\-minimized
+Only meaningful together with
+.BR \-\-tray .
+Start hidden in the tray instead of opening the window.
+If a
+.I word
+is given on the command line the window is opened anyway.
+.TP
+.BR \-h ", " \-\-help
+Print a short help message and exit.
+.TP
+.BR \-v ", " \-\-version
+Print version and license information and exit.
+.SH EXAMPLES
+.TP
+.B gaiksaurus happy
+Look up "happy" in the thesaurus window.
+.TP
+.B gaiksaurus \-\-tray
+Open the window and keep an icon in the system tray.
+.TP
+.B gaiksaurus \-\-tray \-\-minimized
+Start hidden in the system tray; click the icon to open the thesaurus.
+This is a good command for a session autostart entry.
+.SH NOTES
+The tray icon uses the GtkStatusIcon interface.
+It needs a desktop that provides a system tray (for example Xfce, or KDE
+with its legacy tray support); on desktops without one the program still
+works, but without a tray icon.
+.PP
+The icon is installed in the hicolor icon theme as
+.IR gaiksaurus .
+The thesaurus data files are installed in
+.IR /usr/share/aiksaurus/ .
+.SH SEE ALSO
+.UR http://www.aiksaurus.com/
+Aiksaurus home page
+.UE
+.SH AUTHORS
+Aiksaurus was written by Jared Davis and others; see the file
+.I AUTHORS
+in the source distribution.
+The GTK+\-3.0 port and the system tray support
+(\fB\-\-tray\fR and \fB\-\-minimized\fR) were implemented by Claude (Anthropic).
+.SH LICENSE
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.

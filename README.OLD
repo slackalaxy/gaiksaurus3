@@ -1,0 +1,42 @@
+Aiksaurus
+=========
+
+Now hosted by SourceForge: http://aiksaurus.sourceforge.net/
+
+CVS Generously hosted by AbiWord (http://www.abisource.com/)
+
+Relevant Directories:
+
+   base/
+     Contains Aiksaurus Core Library. 
+
+   gtk/
+     Contains gaiksaurus & GTK+ interface library.
+
+28th May, 2003
+Francis James Franklin <fjf@alinameridon.com>
+
+
+Thesaurus Development
+=====================
+
+There is some good documentation available at the developer section
+of the web site:
+
+    http://www.aiksaurus.com/developers/
+     
+
+If you want to do work on the thesaurus data, i.e. add synonyms or 
+so forth, please visit 
+
+    http://www.aiksaurus.com/developers/datatools/
+
+The data tools are very large (~100MB!) so I've kept them out of CVS.
+
+
+Feel free to contact me with any questions!  I'd love to hear about 
+what you're working on.
+
+    Jared Davis
+    jared@aiksaurus.com
+   
